@@ -1,25 +1,65 @@
-import logo from './logo.svg';
-import './App.css';
+import { firebaseConfig } from "./config/Config"
+import { getApp, initializeApp } from "firebase/app"
+import { useState, useEffect } from "react"
+import { getFirestore,
+  collection,
+   getDoc,
+    doc,
+     getDocs } from "firebase/firestore";
+     import {getStorage} from "firebase/storage"
+     import Form from 'react-bootstrap/Form';
+     import 'bootstrap/dist/css/bootstrap.min.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+     import 'App.css'
 
-export default App;
+
+
+    function MyForm() {
+      const [selectedOptions, setSelectedOptions] = useState([]);
+
+      const handleCheckboxChange = (event) => {
+        const { value, checked } = event.target;
+        if (checked) {
+          setSelectedOptions([...selectedOptions, value]);
+        } else {
+          setSelectedOptions(selectedOptions.filter((option) => option !== value));
+        }
+      };
+
+      return (
+        <Form>
+          <Form.Group>
+            <Form.Check
+              type="checkbox"
+              label="poo"
+              value="poo"
+              checked={selectedOptions.includes('poo')}
+              onChange={handleCheckboxChange}
+            />
+            <Form.Check
+              type="checkbox"
+              label="snot"
+              value="snot"
+              checked={selectedOptions.includes('snot')}
+              onChange={handleCheckboxChange}
+            />
+            <Form.Check
+              type="checkbox"
+              label="brain"
+              value="brain"
+              checked={selectedOptions.includes('brain')}
+              onChange={handleCheckboxChange}
+            />
+            <Form.Check
+              type="checkbox"
+              label="fart"
+              value="fart"
+              checked={selectedOptions.includes('fart')}
+              onChange={handleCheckboxChange}
+            />
+          </Form.Group>
+        </Form>
+      );
+    }
+
+    export default App;
