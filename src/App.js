@@ -20,7 +20,7 @@ import { FSContext } from ".//contexts/FSContext.js"
 import { useContext } from "react";
 
 
- export function MyForm(props) {
+export function MyForm(props) {
   const db = useContext(FSContext)
   const [submitter, setSubmitter] = useState('');
   const [date, setDate] = useState('');
@@ -30,45 +30,53 @@ import { useContext } from "react";
   const handleCheckboxChange = (event) => {
     const { value, checked } = event.target;
     if (checked) {
-      setSelectedOptions([selectedOptions, value]);
+      setSelectedOptions([...selectedOptions, value]);
     } else {
       setSelectedOptions(selectedOptions.filter((option) => option !== value));
     }
   };
 
   const submitHandler = async (event) => {
-    event.preventDefault()
-    const incident = {setSubmitter: submitter, setDate: date, setContext: context, setSelectedOptions: selectedOptions }
-    const col = collection(db, `incidents/`)
-    const ref = await addDoc(col, incident )
-    console.log( ref )
-    }
+  event.preventDefault()
+  const incident = { submitter, date, context, selectedOptions }
+  const col = collection(db, `incidents/`)
+  const ref = await addDoc(col, incident)
+    console.log(ref)
+  }
 
   return (
-    <Form>
+    <Form onSubmit={submitHandler}>
       <Form.Group>
         <Form.Label style={{ fontSize: '40px' }}>Ray Ray's Word Bingo</Form.Label>
         <Col sm={2}></Col>
         <Col sm={8}>
           <Form.Label style={{ fontSize: '30px' }}>Enter submitter name:</Form.Label>
           <Form.Control
-          name="submitter"
-          type="text"
-          placeholder="Name" />
+            name="submitter"
+            type="text"
+            placeholder="Name"
+            value={submitter}
+            onChange={(e) => setSubmitter(e.target.value)}
+          />
           <Form.Label style={{ fontSize: '30px' }}>Enter the date the shennanigans occurred (dd-mm-yyyy):</Form.Label>
           <Form.Control
-          name="date"
-          type="text"
-          placeholder="Date"
-           />
+            name="date"
+            type="text"
+            placeholder="Date"
+            value={date}
+            onChange={(e) => setDate(e.target.value)}
+          />
           <Form.Label style={{ fontSize: '30px' }}>Enter context for this tamper tantrum:</Form.Label>
           <Form.Control
-          type="text"
-          name="context"
-          placeholder="Enter context here" />
+            type="text"
+            name="context"
+            placeholder="Enter context here"
+            value={context}
+            onChange={(e) => setContext(e.target.value)}
+          />
           <Form.Label
-          name="selectedoptions"
-          style={{ fontSize: '30px' }}>Select the words used by Ray during his little tamper tantrum:
+            name="selectedoptions"
+            style={{ fontSize: '30px' }}>Select the words used by Ray during his little tamper tantrum:
           </Form.Label>
           <Form.Check
             type="checkbox"
@@ -98,24 +106,10 @@ import { useContext } from "react";
             checked={selectedOptions.includes('fart')}
             onChange={handleCheckboxChange}
           />
+          <Button type="submit">Submit</Button>
         </Col>
-        <Col sm={2}></Col>
-      </Form.Group>
-
-      <Button variant="primary" type="submit">
-        Submit
-      </Button>
-      <Form.Group>
-        <h3>Existing entries</h3>
-        <p>To be added</p>
-      </Form.Group>
-      <Form.Group>
-      <h3>I am sorry in advance for this Ash LMFAO🤣</h3>
       </Form.Group>
     </Form>
-
-
   );
 }
-
 export default MyForm;
