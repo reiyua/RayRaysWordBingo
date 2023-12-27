@@ -10,6 +10,7 @@ import { getFirestore,
      import Form from 'react-bootstrap/Form';
      import Button from 'react-bootstrap/Button';
      import 'bootstrap/dist/css/bootstrap.min.css';
+     import Col from 'react-bootstrap/Col';
 
      import './App.css'
 
@@ -30,12 +31,14 @@ import { getFirestore,
       return (
         <Form>
           <Form.Group>
+          <Col sm={2}></Col>
+         <Col sm={8}>
           <Form.Label style={{ fontSize: '30px' }}>Enter submitter name:</Form.Label>
           <Form.Control type="text" 
                         placeholder="Name" /> 
           <Form.Label style={{ fontSize: '30px' }}>Enter the date the shennanigans occurred (dd-mm-yyyy):</Form.Label> 
           <Form.Control type="text" placeholder="Date" /> 
-            <Form.Label style={{ fontSize: '30px' }}>Select the words used by ray</Form.Label>
+            <Form.Label style={{ fontSize: '30px' }}>Select the words used by ray:</Form.Label>
             <Form.Check
               type="checkbox"
               label="poop"
@@ -64,7 +67,13 @@ import { getFirestore,
               checked={selectedOptions.includes('fart')}
               onChange={handleCheckboxChange}
             />
+             </Col>
+     <Col sm={2}></Col>
           </Form.Group>
+          
+          <Button variant="primary" type="submit"> 
+           Submit
+        </Button> 
         </Form>
       );
     }
