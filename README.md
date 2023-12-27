@@ -11,4 +11,4 @@ Simple check boxes for the various words i commonly use as joking insults such a
 - fart
 
 TO DO:
-Display list of episodes in list form from Firebase Firestore.
+Display list of tantrums in list form from Firebase Firestore.
