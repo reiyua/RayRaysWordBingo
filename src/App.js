@@ -77,8 +77,13 @@ import { getFirestore,
           
           <Button variant="primary" type="submit"> 
            Submit
-        </Button> 
+        </Button>
+        <Form.Group>
+                                <h3>Existing entries</h3>
+                                <p>To be added</p>
+                            </Form.Group> 
         </Form>
+
       );
     }
 
