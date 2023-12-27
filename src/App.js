@@ -1,4 +1,4 @@
-import { firebaseConfig } from "./config/Config"
+import { firebaseConfig } from "./config/Config.js"
 import { getApp, initializeApp } from "firebase/app"
 import { useState, useEffect } from "react"
 import { getFirestore,
@@ -8,9 +8,10 @@ import { getFirestore,
      getDocs } from "firebase/firestore";
      import {getStorage} from "firebase/storage"
      import Form from 'react-bootstrap/Form';
+     import Button from 'react-bootstrap/Button';
      import 'bootstrap/dist/css/bootstrap.min.css';
 
-     import 'App.css'
+     import './App.css'
 
 
 
@@ -29,11 +30,12 @@ import { getFirestore,
       return (
         <Form>
           <Form.Group>
+            <Form.Label style={{ fontSize: '30px' }}>Select the words used by ray</Form.Label>
             <Form.Check
               type="checkbox"
-              label="poo"
-              value="poo"
-              checked={selectedOptions.includes('poo')}
+              label="poop"
+              value="poop"
+              checked={selectedOptions.includes('poop')}
               onChange={handleCheckboxChange}
             />
             <Form.Check
@@ -62,4 +64,4 @@ import { getFirestore,
       );
     }
 
-    export default App;
+    export default MyForm;
