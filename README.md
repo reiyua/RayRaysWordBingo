@@ -5,7 +5,7 @@ Ask's user to fill in basic information to record Ray's moment.
 
 Simple check boxes for the various words i commonly use as joking insults such as:
 
-- poo
+- poop
 - snot
 - brain
 - fart
