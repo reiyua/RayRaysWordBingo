@@ -10,5 +10,10 @@ Simple check boxes for the various words i commonly use as joking insults such a
 - brain
 - fart
 
+
+CURRENT ISSUES:
+
+Unable to submit data to Firestore
+
 TO DO:
 Display list of tantrums in list form from Firebase Firestore.
