@@ -29,9 +29,10 @@ import { getFirestore,
       };
 
       return (
-
         <Form>
           <Form.Group>
+            <Form.Label style={{ fontSize: '40px' }}>Ray Ray's Word Bingo</Form.Label>
+            
           <Col sm={2}></Col>
          <Col sm={8}>
           <Form.Label style={{ fontSize: '30px' }}>Enter submitter name:</Form.Label>
