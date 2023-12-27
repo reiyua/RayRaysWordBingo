@@ -1,3 +1,4 @@
+// Import required components and modules from Firebase and Firebase Config
 import firebaseConfig from "./config/Config.js"
 import { getApp, initializeApp } from "firebase/app"
 import { useState, useEffect } from "react"
@@ -9,16 +10,25 @@ import {
   getDocs,
   addDoc
 } from "firebase/firestore";
+
+// import components from React.js
+
+import { useContext } from "react";
+
+// Import required compenets from Bootstrap and React-Boostrap
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Col from 'react-bootstrap/Col';
 import './App.css'
 
+// Import custom contexts
+
 import { FSContext } from ".//contexts/FSContext.js"
 
-import { useContext } from "react";
 
+
+// declare variables
 
 export function MyForm(props) {
   const db = useContext(FSContext)
@@ -27,6 +37,7 @@ export function MyForm(props) {
   const [context, setContext] = useState('');
   const [selectedOptions, setSelectedOptions] = useState([]);
 
+  // Create a function to handle the checkbox changes and update the state accordingly.
   const handleCheckboxChange = (event) => {
     const { value, checked } = event.target;
     if (checked) {
@@ -36,6 +47,9 @@ export function MyForm(props) {
     }
   };
 
+
+  // Create a function to handle the form submission and add data to Firebase.
+
   const submitHandler = async (event) => {
   event.preventDefault()
   const incident = { submitter, date, context, selectedOptions }
@@ -44,6 +58,7 @@ export function MyForm(props) {
     console.log(ref)
   }
 
+  // Create form for user to imput data
   return (
     <Form onSubmit={submitHandler}>
       <Form.Group>
@@ -106,10 +121,13 @@ export function MyForm(props) {
             checked={selectedOptions.includes('fart')}
             onChange={handleCheckboxChange}
           />
+
           <Button type="submit">Submit</Button>
         </Col>
       </Form.Group>
     </Form>
+    // Create a button to submit the form data to Firebase
   );
 }
 export default MyForm;
+
