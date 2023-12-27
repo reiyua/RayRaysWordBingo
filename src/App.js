@@ -32,7 +32,6 @@ import { getFirestore,
         <Form>
           <Form.Group>
             <Form.Label style={{ fontSize: '40px' }}>Ray Ray's Word Bingo</Form.Label>
-            <p>I am sorry in advance Ash for taking one of your jokes literally lmao</p>
           <Col sm={2}></Col>
          <Col sm={8}>
           <Form.Label style={{ fontSize: '30px' }}>Enter submitter name:</Form.Label>
