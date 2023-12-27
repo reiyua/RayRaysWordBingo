@@ -29,6 +29,7 @@ import { getFirestore,
       };
 
       return (
+
         <Form>
           <Form.Group>
           <Col sm={2}></Col>
@@ -38,7 +39,7 @@ import { getFirestore,
                         placeholder="Name" /> 
           <Form.Label style={{ fontSize: '30px' }}>Enter the date the shennanigans occurred (dd-mm-yyyy):</Form.Label> 
           <Form.Control type="text" placeholder="Date" /> 
-            <Form.Label style={{ fontSize: '30px' }}>Select the words used by Ray:</Form.Label>
+            <Form.Label style={{ fontSize: '30px' }}>Select the words used by Ray during his little tamper tantrum:</Form.Label>
             <Form.Check
               type="checkbox"
               label="poop"
