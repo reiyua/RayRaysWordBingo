@@ -30,6 +30,11 @@ import { getFirestore,
       return (
         <Form>
           <Form.Group>
+          <Form.Label style={{ fontSize: '30px' }}>Enter submitter name:</Form.Label>
+          <Form.Control type="text" 
+                        placeholder="Name" /> 
+          <Form.Label style={{ fontSize: '30px' }}>Enter the date the shennanigans occurred (dd-mm-yyyy):</Form.Label> 
+          <Form.Control type="text" placeholder="Date" /> 
             <Form.Label style={{ fontSize: '30px' }}>Select the words used by ray</Form.Label>
             <Form.Check
               type="checkbox"
