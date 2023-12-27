@@ -32,7 +32,7 @@ import { getFirestore,
         <Form>
           <Form.Group>
             <Form.Label style={{ fontSize: '40px' }}>Ray Ray's Word Bingo</Form.Label>
-            <p>I am sorry in advance for taking one of your jokes literally lmao</p>
+            <p>I am sorry in advance Ash for taking one of your jokes literally lmao</p>
           <Col sm={2}></Col>
          <Col sm={8}>
           <Form.Label style={{ fontSize: '30px' }}>Enter submitter name:</Form.Label>
@@ -40,6 +40,9 @@ import { getFirestore,
                         placeholder="Name" /> 
           <Form.Label style={{ fontSize: '30px' }}>Enter the date the shennanigans occurred (dd-mm-yyyy):</Form.Label> 
           <Form.Control type="text" placeholder="Date" /> 
+          <Form.Label style={{ fontSize: '30px' }}>Enter context for this tamper tantrum:</Form.Label>
+          <Form.Control type="text" 
+                        placeholder="Enter context here" /> 
             <Form.Label style={{ fontSize: '30px' }}>Select the words used by Ray during his little tamper tantrum:</Form.Label>
             <Form.Check
               type="checkbox"
