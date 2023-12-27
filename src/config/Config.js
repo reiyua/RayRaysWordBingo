@@ -1,8 +1,8 @@
 export const firebaseConfig = {
-  apiKey: "AIzaSyDOqy82gGzhHpJhl7wJ59RZqEXgSs4PLqA",
-  authDomain: "rayraysbingo.firebaseapp.com",
-  projectId: "rayraysbingo",
-  storageBucket: "rayraysbingo.appspot.com",
-  messagingSenderId: "201595566813",
-  appId: "1:201595566813:web:38d77605d5b0c43253b934"
+  apiKey: "AIzaSyAz4-TLqma6EBhQBDaacJZCJ5W6KRygzk8",
+  authDomain: "ray-ray-s-word-bingo.firebaseapp.com",
+  projectId: "ray-ray-s-word-bingo",
+  storageBucket: "ray-ray-s-word-bingo.appspot.com",
+  messagingSenderId: "1065410299147",
+  appId: "1:1065410299147:web:f1b066864faa0298bf0e0e"
 };
