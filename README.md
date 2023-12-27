@@ -1,5 +1,7 @@
 # RayRaysWordBingo
-This was an inside joke where people tally my weird insult joke words and how many times I use them, comprises of a simple web app using Google Firebase's Hosting and Firestore, plans to add authentication to identify who sent the submission, simple dropdown box for now.
+This was an inside joke where people tally my weird insult joke words and how many times I use each word. This comprises of a simple web app using Google Firebase's Hosting and Firestore
+
+Ask's user to fill in basic information to record Ray's moment.
 
 Simple check boxes for the various words i commonly use as joking insults such as:
 
@@ -7,3 +9,6 @@ Simple check boxes for the various words i commonly use as joking insults such a
 - snot
 - brain
 - fart
+
+TO DO:
+Display list of episodes in list form from Firebase Firestore.
