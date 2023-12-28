@@ -140,6 +140,11 @@ export function MyForm(props) {
             <Button type="submit">Submit</Button>
           </Col>
         </Form.Group>
+        <Form.Group>
+          <Form.Label style={{ fontSize: '30px' }}>Existing entries</Form.Label>
+          <p>Check here for existing entries:</p>
+          <p>UNDER CONSTRUCTION:</p>
+        </Form.Group>
       </Form>
     </div>
   );
