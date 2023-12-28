@@ -34,6 +34,7 @@ export function MyForm(props) {
   const [date, setDate] = useState('');
   const [context, setContext] = useState('');
   const [selectedOptions, setSelectedOptions] = useState([]);
+  const [incidents, setIncidents] = useState([]); // Declare incidents as an empty array
 
   // Create a function to handle the checkbox changes and update the state accordingly.
   const handleCheckboxChange = (event) => {
@@ -50,9 +51,9 @@ export function MyForm(props) {
 
     const submitHandler = async (event) => {
      event.preventDefault()
-     const incidents = { setSubmitter, setDate, setContext, setSelectedOptions }
+     const incidentsData = { submitter, date, context, selectedOptions } // Use the state variables directly
      const col = collection(db, `incidents/${props.incidentId}/incident_logs`)
-     const ref = await addDoc(col, incidents)
+     const ref = await addDoc(col, incidentsData)
      console.log(ref)
    }
 
