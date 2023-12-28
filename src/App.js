@@ -80,7 +80,7 @@ export function MyForm(props) {
               value={date}
               onChange={(e) => setDate(e.target.value)}
             />
-            <Form.Label style={{ fontSize: '30px' }}>Enter context for this tamper tantrum:</Form.Label>
+            <Form.Label style={{ fontSize: '30px' }}>Enter context for this ray moment:</Form.Label>
             <Form.Control
               type="text"
               name="context"
@@ -118,6 +118,22 @@ export function MyForm(props) {
               label="fart"
               value="fart"
               checked={selectedOptions.includes('fart')}
+              onChange={handleCheckboxChange}
+            />
+
+<Form.Check
+              type="checkbox"
+              label="sus"
+              value="sus"
+              checked={selectedOptions.includes('sus')}
+              onChange={handleCheckboxChange}
+            />
+
+<Form.Check
+              type="checkbox"
+              label="fr fr"
+              value="fr fr"
+              checked={selectedOptions.includes('fr fr')}
               onChange={handleCheckboxChange}
             />
 
