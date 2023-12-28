@@ -19,4 +19,4 @@ CURRENT ISSUES:
 Unable to submit data to Firestore
 
 TO DO:
-Display list of tantrums in list form from Firebase Firestore.
+Display list of tantrums in list form from Firebase Firestore. (Code is added, just need to get submitting code functioning)
