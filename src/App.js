@@ -152,7 +152,7 @@ export function MyForm(props) {
         </Form.Group>
 
 
-// Create a form group to display the existing entries in the database.        
+
         <Form.Group>
           <Form.Label style={{ fontSize: '30px' }}>Existing entries</Form.Label>
           <p>Check here for existing entries:</p>
@@ -169,6 +169,7 @@ export function MyForm(props) {
         </Form.Group>
       </Form>
     </div>
+// Create a form group to display the existing entries in the database.        
   );
 }
 export default MyForm;
