@@ -9,6 +9,8 @@ Simple check boxes for the various words i commonly use as joking insults such a
 - snot
 - brain
 - fart
+- sus
+- fr fr
 
 
 CURRENT ISSUES:
