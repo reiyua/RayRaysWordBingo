@@ -138,6 +138,15 @@ export function MyForm(props) {
               onChange={handleCheckboxChange}
             />
 
+<Form.Check
+              type="checkbox"
+              label="balls"
+              value="balls"
+              checked={selectedOptions.includes('balls')}
+              onChange={handleCheckboxChange}
+            />
+
+
             <Button type="submit">Submit</Button>
           </Col>
         </Form.Group>

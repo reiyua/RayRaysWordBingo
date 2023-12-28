@@ -11,6 +11,7 @@ Simple check boxes for the various words i commonly use as joking insults such a
 - fart
 - sus
 - fr fr
+- balls
 
 
 CURRENT ISSUES:
