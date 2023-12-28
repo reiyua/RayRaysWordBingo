@@ -46,7 +46,7 @@ export function MyForm(props) {
   };
 
 
-  // Create a function to handle the form submission and add data to Firebase.
+  // Create a function to handle the form submission and add data to Firebase. NOT WORKING
 
     const submitHandler = async (event) => {
      event.preventDefault()
@@ -143,7 +143,16 @@ export function MyForm(props) {
         <Form.Group>
           <Form.Label style={{ fontSize: '30px' }}>Existing entries</Form.Label>
           <p>Check here for existing entries:</p>
-          <p>UNDER CONSTRUCTION:</p>
+          <p>Code added, work in progress to add said incidents to Firestore.</p>
+          <h2>Incidents in the Database:</h2>
+          {incidents.map((incident) => (
+            <div key={incident.id}>
+              <p>Submitter: {incident.submitter}</p>
+              <p>Date: {incident.date}</p>
+              <p>Context: {incident.context}</p>
+              <p>Selected Options: {incident.selectedOptions.join(", ")}</p>
+            </div>
+          ))}
         </Form.Group>
       </Form>
     </div>
