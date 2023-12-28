@@ -90,7 +90,7 @@ export function MyForm(props) {
             />
             <Form.Label
               name="selectedoptions"
-              style={{ fontSize: '30px' }}>Select the words used by Ray during his little tamper tantrum:
+              style={{ fontSize: '30px' }}>Select the words used by Ray during this Ray moment:
             </Form.Label>
             <Form.Check
               type="checkbox"
