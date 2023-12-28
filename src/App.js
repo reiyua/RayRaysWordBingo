@@ -80,7 +80,7 @@ export function MyForm(props) {
               value={date}
               onChange={(e) => setDate(e.target.value)}
             />
-            <Form.Label style={{ fontSize: '30px' }}>Enter context for this ray moment:</Form.Label>
+            <Form.Label style={{ fontSize: '30px' }}>Enter context for this Ray moment:</Form.Label>
             <Form.Control
               type="text"
               name="context"
