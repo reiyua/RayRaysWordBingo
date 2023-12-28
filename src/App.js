@@ -50,13 +50,13 @@ export function MyForm(props) {
 
   // Create a function to handle the form submission and add data to Firebase.
 
-  const submitHandler = async (event) => {
-    event.preventDefault()
-    const incident = { submitter, date, context, selectedOptions }
-    const col = collection(db, `incidents/`)
-    const ref = await addDoc(col, incident)
-    console.log(ref)
-  }
+    const submitHandler = async (event) => {
+     event.preventDefault()
+     const incidents = { setSubmitter, setDate, setContext, setSelectedOptions }
+     const col = collection(db, `incidents/${props.incidentId}/incident_logs`)
+     const ref = await addDoc(col, incidents)
+     console.log(ref)
+   }
 
   // Create form for user to imput data
   return (
