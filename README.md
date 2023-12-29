@@ -18,7 +18,5 @@ Simple check boxes for the various words i commonly use as joking insults such a
 
 CURRENT ISSUES:
 
-Unable to submit data to Firestore
-
 TO DO:
-Display list of bingos in list form from Firebase Firestore. (Code is added, just need to get submitting code functioning)
+Display list of bingos in list form from Firebase Firestore. (working, but need to make more neater)
