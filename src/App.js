@@ -19,7 +19,7 @@ import './App.css'
 
 if (!getApps().length) {
   initializeApp(firebaseConfig);
- }
+}
 
 // declare variables
 
@@ -31,21 +31,21 @@ export function MyForm(props) {
   const [incidents, setIncidents] = useState([]); // Declare incidents as an empty array
 
   // Fetch incidents from Firestore when the component mounts
- useEffect(() => {
-  const incidentsRef = collection(db, "incidents");
-  getDocs(incidentsRef).then((snapshot) => {
-    const incidentsArray = snapshot.docs.map((doc) => ({ id: doc.id, ...doc.data() }));
-    setIncidents(incidentsArray);
-  });
- }, []);
+  useEffect(() => {
+    const incidentsRef = collection(db, "incidents");
+    getDocs(incidentsRef).then((snapshot) => {
+      const incidentsArray = snapshot.docs.map((doc) => ({ id: doc.id, ...doc.data() }));
+      setIncidents(incidentsArray);
+    });
+  }, []);
 
   // Ensure Firebase is initialized before using it
-if (!getApp().length) {
-  initializeApp(firebaseConfig);
+  if (!getApp().length) {
+    initializeApp(firebaseConfig);
 
-}
+  }
 
-const db = getFirestore(getApp());
+  const db = getFirestore(getApp());
 
 
   // Create a function to handle the checkbox changes and update the state accordingly.
@@ -61,13 +61,13 @@ const db = getFirestore(getApp());
 
   // Create a function to handle the form submission and add data to Firebase. NOT WORKING
 
-    const submitHandler = async (event) => {
-     event.preventDefault()
-     const incidentsData = { submitter, date, context, selectedOptions } // Use the state variables directly
-     const col = collection(db, `incidents`)
-     const ref = await addDoc(col, incidentsData)
-     console.log(ref)
-   }
+  const submitHandler = async (event) => {
+    event.preventDefault()
+    const incidentsData = { submitter, date, context, selectedOptions } // Use the state variables directly
+    const col = collection(db, `incidents`)
+    const ref = await addDoc(col, incidentsData)
+    console.log(ref)
+  }
 
   // Create form for user to imput data
   return (
@@ -134,7 +134,7 @@ const db = getFirestore(getApp());
               onChange={handleCheckboxChange}
             />
 
-<Form.Check
+            <Form.Check
               type="checkbox"
               label="sus"
               value="sus"
@@ -142,7 +142,7 @@ const db = getFirestore(getApp());
               onChange={handleCheckboxChange}
             />
 
-<Form.Check
+            <Form.Check
               type="checkbox"
               label="fr fr"
               value="fr fr"
@@ -150,19 +150,24 @@ const db = getFirestore(getApp());
               onChange={handleCheckboxChange}
             />
 
-<Form.Check
+            <Form.Check
               type="checkbox"
               label="balls"
               value="balls"
               checked={selectedOptions.includes('balls')}
               onChange={handleCheckboxChange}
             />
-
+            <Form.Check
+              type="checkbox"
+              label="bruh"
+              value="bruh"
+              checked={selectedOptions.includes('bruh')}
+              onChange={handleCheckboxChange} />
 
             <Button type="submit">Submit</Button>
           </Col>
         </Form.Group>
-<p>Refresh once submitted to see result added below.</p>
+        <p>Refresh once submitted to see result added below.</p>
 
         <Form.Group>
           <h2>Existing incidents in the database:</h2>
@@ -183,7 +188,7 @@ const db = getFirestore(getApp());
         </Form.Group>
       </Form>
     </div>
-// Create a form group to display the existing entries in the database.        
+    // Create a form group to display the existing entries in the database.        
   );
 }
 export default MyForm;
