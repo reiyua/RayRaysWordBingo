@@ -19,4 +19,4 @@ Simple check boxes for the various words i commonly use as joking insults such a
 CURRENT ISSUES:
 
 TO DO:
-Display list of bingos in list form from Firebase Firestore. (working, but need to display in a neater fashion)
+Display list of bingos at bottom in a neat order and not jumble the words used.
