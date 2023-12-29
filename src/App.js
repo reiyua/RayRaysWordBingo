@@ -166,7 +166,7 @@ const db = getFirestore(getApp());
             <Button type="submit">Submit</Button>
           </Col>
         </Form.Group>
-
+<p>Refresh once submitted to see result added below.</p>
 
         <Form.Group>
           <h2>Existing incidents in the database:</h2>
