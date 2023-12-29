@@ -168,6 +168,8 @@ const db = getFirestore(getApp());
           <h2>Existing incidents in the database:</h2>
           {incidents.map((incident) => (
             <div key={incident.id}>
+              <h3><u>Incident ID:</u></h3>
+              <p>{incident.id}</p>
               <h3>What date did this shennanigans occur?:</h3>
               <p>{incident.date}</p>
               <h3>Who submitted this:</h3>
