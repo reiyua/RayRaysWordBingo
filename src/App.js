@@ -12,11 +12,6 @@ import {
   addDoc
 } from "firebase/firestore";
 
-if (!getApps().length) {
-  initializeApp(firebaseConfig);
- }
-
-
 // Import required compenets from Bootstrap and React-Boostrap
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
@@ -27,6 +22,13 @@ import './App.css'
 // Import custom contexts
 
 import { FSContext } from ".//contexts/FSContext.js"
+
+if (!getApps().length) {
+  initializeApp(firebaseConfig);
+ }
+
+
+
 
 
 
