@@ -1,5 +1,5 @@
 # RayRaysWordBingo
-This was an inside joke where close friends tally my weird insult joke words and how many times I use each word. This comprises of a simple web app using Google Firebase's Hosting and Firestore
+This was an inside joke where close friends tally my weird insult joke words and how many times I use each word. This comprises of a simple web app using Google Firebase's Hosting and Firestore to store entries created by submitters.
 
 https://rayrayswordbingo.web.app
 
@@ -19,4 +19,4 @@ Simple check boxes for the various words i commonly use as joking insults such a
 CURRENT ISSUES:
 
 TO DO:
-Display list of bingos in list form from Firebase Firestore. (working, but need to make more neater)
+Display list of bingos in list form from Firebase Firestore. (working, but need to display in a neater fashion)
