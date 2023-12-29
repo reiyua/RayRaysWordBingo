@@ -1,7 +1,8 @@
 // Import required components and modules from Firebase and Firebase Config
-import firebaseConfig from "./config/Config.js"
+import { firebaseConfig } from "./config/Config.js"
 import { getApp, initializeApp } from "firebase/app"
 import { useState, useEffect } from "react"
+import { getApps } from "firebase/app";
 import {
   getFirestore,
   collection,
@@ -11,9 +12,10 @@ import {
   addDoc
 } from "firebase/firestore";
 
-// import components from React.js
+if (!getApps().length) {
+  initializeApp(firebaseConfig);
+ }
 
-import { useContext } from "react";
 
 // Import required compenets from Bootstrap and React-Boostrap
 import Form from 'react-bootstrap/Form';
@@ -26,15 +28,25 @@ import './App.css'
 
 import { FSContext } from ".//contexts/FSContext.js"
 
+
+
 // declare variables
 
 export function MyForm(props) {
-  const db = useContext(FSContext)
   const [submitter, setSubmitter] = useState('');
   const [date, setDate] = useState('');
   const [context, setContext] = useState('');
   const [selectedOptions, setSelectedOptions] = useState([]);
   const [incidents, setIncidents] = useState([]); // Declare incidents as an empty array
+
+  // Ensure Firebase is initialized before using it
+if (!getApp().length) {
+  initializeApp(firebaseConfig);
+
+}
+
+const db = getFirestore(getApp());
+
 
   // Create a function to handle the checkbox changes and update the state accordingly.
   const handleCheckboxChange = (event) => {
