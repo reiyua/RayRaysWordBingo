@@ -21,7 +21,6 @@ if (!getApps().length) {
   initializeApp(firebaseConfig);
  }
 
-
 // declare variables
 
 export function MyForm(props) {
