@@ -1,8 +1,6 @@
 # RayRaysWordBingo
 This was an inside joke where close friends tally my weird insult joke words and how many times I use each word. This comprises of a simple web app using Google Firebase's Hosting and Firestore
 
-Might add authentication to prevent spam bots and to identify bingo logs
-
 https://rayrayswordbingo.web.app
 
 Ask's user to fill in basic information to record Ray's moment.
