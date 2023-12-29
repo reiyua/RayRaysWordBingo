@@ -171,7 +171,7 @@ export function MyForm(props) {
 
         <Form.Group>
           <h2>Existing incidents in the database:</h2>
-          {incidents.map((incident) => (
+          {incidents.map((incident, index) => (
             <div key={incident.id}>
               <h3><u>Incident ID:</u></h3>
               <p>{incident.id}</p>
@@ -183,6 +183,7 @@ export function MyForm(props) {
               <p>{incident.context}</p>
               <h3>What word's did Ray use this time?:</h3>
               <p>{incident.selectedOptions.join(', ')}</p>
+              {index !== incidents.length - 1 && <hr style={{ fontWeight: 'bold' }} />}
             </div>
           ))}
         </Form.Group>
