@@ -19,10 +19,6 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Col from 'react-bootstrap/Col';
 import './App.css'
 
-// Import custom contexts
-
-import { FSContext } from ".//contexts/FSContext.js"
-
 if (!getApps().length) {
   initializeApp(firebaseConfig);
  }
@@ -66,7 +62,7 @@ const db = getFirestore(getApp());
     const submitHandler = async (event) => {
      event.preventDefault()
      const incidentsData = { submitter, date, context, selectedOptions } // Use the state variables directly
-     const col = collection(db, `incidents/${props.incidentId}/incident_logs`)
+     const col = collection(db, `incidents`)
      const ref = await addDoc(col, incidentsData)
      console.log(ref)
    }
