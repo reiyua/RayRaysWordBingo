@@ -168,12 +168,12 @@ const db = getFirestore(getApp());
           <p>Check here for existing entries:</p>
           <p>Code added, work in progress to add said incidents to Firestore.</p>
           <h2>Incidents in the Database:</h2>
-          {incidents.map((incident) => (
-            <div key={incident.id}>
-              <p>Submitter: {incident.submitter}</p>
-              <p>Date: {incident.date}</p>
-              <p>Context: {incident.context}</p>
-              <p>Selected Options: {incident.selectedOptions.join(", ")}</p>
+          {incidents.map((incidents) => (
+            <div key={incidents.id}>
+              <p>Submitter: {incidents.submitter}</p>
+              <p>Date: {incidents.date}</p>
+              <p>Context: {incidents.context}</p>
+              <p>Selected Options: {incidents.selectedOptions.join(", ")}</p>
             </div>
           ))}
         </Form.Group>
