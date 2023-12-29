@@ -172,14 +172,14 @@ const db = getFirestore(getApp());
           <h2>Existing incidents in the database:</h2>
           {incidents.map((incident) => (
             <div key={incident.id}>
-              <h3 bold>What date did this shennanigans occur?:
-                 {incident.date}</h3>
-              <h2>Who submitted this:
-                {incident.submitter}</h2>
-              <h2>What caused Ray's moment?:
-                 {incident.context}</h2>
-              <h2>What word's did Ray use this time?:
-                 {incident.selectedOptions}</h2>
+              <h3>What date did this shennanigans occur?:</h3>
+              <p>{incident.date}</p>
+              <h3>Who submitted this:</h3>
+              <p>{incident.submitter}</p>
+              <h3>What caused Ray's moment?:</h3>
+              <p>{incident.context}</p>
+              <h2>What word's did Ray use this time?:</h2>
+              <p>{incident.selectedOptions}</p>
             </div>
           ))}
         </Form.Group>
