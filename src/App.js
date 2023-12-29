@@ -24,10 +24,6 @@ if (!getApps().length) {
  }
 
 
-
-
-
-
 // declare variables
 
 export function MyForm(props) {
@@ -162,18 +158,14 @@ const db = getFirestore(getApp());
         </Form.Group>
 
 
-
         <Form.Group>
-          <Form.Label style={{ fontSize: '30px' }}>Existing entries</Form.Label>
-          <p>Check here for existing entries:</p>
-          <p>Code added, work in progress to add said incidents to Firestore.</p>
-          <h2>Incidents in the Database:</h2>
-          {incidents.map((incidents) => (
-            <div key={incidents.id}>
-              <p>Submitter: {incidents.submitter}</p>
-              <p>Date: {incidents.date}</p>
-              <p>Context: {incidents.context}</p>
-              <p>Selected Options: {incidents.selectedOptions.join(", ")}</p>
+          <h2>Existing incidents in the database:</h2>
+          {incidents.map((incident) => (
+            <div key={incident.id}>
+              <h2>{incident.submitter}</h2>
+              <h3>{incident.date}</h3>
+              <h3>{incident.context}</h3>
+              <h3>{incident.selectedOptions}</h3>
             </div>
           ))}
         </Form.Group>
