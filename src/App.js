@@ -11,6 +11,7 @@ import {
   getDocs,
   addDoc
 } from "firebase/firestore";
+import { onSnapshot } from "firebase/firestore";
 
 // Import required compenets from Bootstrap and React-Boostrap
 import Form from 'react-bootstrap/Form';
@@ -32,6 +33,15 @@ export function MyForm(props) {
   const [context, setContext] = useState('');
   const [selectedOptions, setSelectedOptions] = useState([]);
   const [incidents, setIncidents] = useState([]); // Declare incidents as an empty array
+
+  // Fetch incidents from Firestore when the component mounts
+ useEffect(() => {
+  const incidentsRef = collection(db, "incidents");
+  getDocs(incidentsRef).then((snapshot) => {
+    const incidentsArray = snapshot.docs.map((doc) => ({ id: doc.id, ...doc.data() }));
+    setIncidents(incidentsArray);
+  });
+ }, []);
 
   // Ensure Firebase is initialized before using it
 if (!getApp().length) {
@@ -162,10 +172,14 @@ const db = getFirestore(getApp());
           <h2>Existing incidents in the database:</h2>
           {incidents.map((incident) => (
             <div key={incident.id}>
-              <h2>{incident.submitter}</h2>
-              <h3>{incident.date}</h3>
-              <h3>{incident.context}</h3>
-              <h3>{incident.selectedOptions}</h3>
+              <h3 bold>What date did this shennanigans occur?:
+                 {incident.date}</h3>
+              <h2>Who submitted this:
+                {incident.submitter}</h2>
+              <h2>What caused Ray's moment?:
+                 {incident.context}</h2>
+              <h2>What word's did Ray use this time?:
+                 {incident.selectedOptions}</h2>
             </div>
           ))}
         </Form.Group>
