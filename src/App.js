@@ -6,12 +6,9 @@ import { getApps } from "firebase/app";
 import {
   getFirestore,
   collection,
-  getDoc,
-  doc,
   getDocs,
   addDoc
 } from "firebase/firestore";
-import { onSnapshot } from "firebase/firestore";
 
 // Import required compenets from Bootstrap and React-Boostrap
 import Form from 'react-bootstrap/Form';
