@@ -15,7 +15,3 @@ Simple check boxes for the various words i commonly use as joking insults such a
 - fr fr
 - balls
 
-
-CURRENT ISSUES:
-
-Display list of bingos at bottom in a neat order and not jumble the words used.

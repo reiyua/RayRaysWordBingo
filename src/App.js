@@ -177,7 +177,7 @@ const db = getFirestore(getApp());
               <h3>What caused Ray's moment?:</h3>
               <p>{incident.context}</p>
               <h3>What word's did Ray use this time?:</h3>
-              <p>{incident.selectedOptions}</p>
+              <p>{incident.selectedOptions.join(', ')}</p>
             </div>
           ))}
         </Form.Group>
