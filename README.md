@@ -3,6 +3,9 @@ This was an inside joke where close friends tally my weird insult joke words and
 
 https://rayrayswordbingo.web.app
 
+Also hosted on Netlify as backup:
+https://rayrayswordbingo.netlify.app
+
 Ask's user to fill in basic information to record Ray's moment.
 
 Simple check boxes for the various words i commonly use as joking insults such as:
