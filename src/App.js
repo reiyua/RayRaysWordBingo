@@ -59,11 +59,11 @@ export function MyForm(props) {
   };
 
 
-  // Create a function to handle the form submission and add data to Firebase. NOT WORKING
+  // Create a function to handle the form submission and add data to Firebase.
 
   const submitHandler = async (event) => {
     event.preventDefault()
-    const incidentsData = { submitter, date, context, selectedOptions } // Use the state variables directly
+    const incidentsData = { submitter, date, context, selectedOptions }
     const col = collection(db, `incidents`)
     const ref = await addDoc(col, incidentsData)
     console.log(ref)
