@@ -67,6 +67,8 @@ export function MyForm(props) {
     const col = collection(db, `incidents`)
     const ref = await addDoc(col, incidentsData)
     console.log(ref)
+    alert("Form submitted successfully!");
+    window.location.reload();
   }
 
   // Create form for user to imput data
@@ -167,7 +169,6 @@ export function MyForm(props) {
             <Button type="submit">Submit</Button>
           </Col>
         </Form.Group>
-        <p>Refresh once submitted to see result added below.</p>
 
         <Form.Group>
           <h2>Existing incidents in the database:</h2>
