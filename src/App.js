@@ -60,6 +60,10 @@ export function MyForm(props) {
 
 
   // Create a function to handle the form submission and add data to Firebase.
+  // Once user presses submit, a popup will appearstating the data was sent.
+  // When user acknowledges popup and closes it, the page will reload,
+  // clearing the form and adding the new data to the database.
+
 
   const submitHandler = async (event) => {
     event.preventDefault()
