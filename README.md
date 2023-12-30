@@ -1,5 +1,5 @@
 # RayRaysWordBingo
-This was an inside joke where close friends tally my weird insult joke words and how many times I use each word. This comprises of a simple web app using Google Firebase's Hosting and Firestore to store entries created by submitters.
+This was an inside joke where close friends tally my weird insult joke words and how many times I use each word. This comprises of a simple React.js web app using create-react-app to deploy and build the template and uses Google Firebase's Hosting and Firestore to store entries created by submitters and host's the website.
 
 https://rayrayswordbingo.web.app
 
